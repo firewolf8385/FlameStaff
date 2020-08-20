@@ -38,6 +38,11 @@ commands:
     description: View another player''s inventory.
     permission: flamestaff.invsee
     permission-message: *noperms
+  uuid:
+    description: View a player''s UUID.
+    aliases: [getuuid]
+    permission: flamestaff.uuid
+    permission-message: *noperms
   vanish:
     description: Hide yourself ingame
     aliases: [v]
@@ -67,6 +72,7 @@ permissions:
       flamestaff.ecsee: true
       flamestaff.invisible: true
       flamestaff.invsee: true
+      flamestaff.uuid: true
       flamestaff.vanish: true
   flamestaff.commandspy:
     description: Spy on other''s commands.
@@ -82,6 +88,9 @@ permissions:
     default: op
   flamestaff.invsee:
     description: View another player''s inventory.
+    default: op
+  flamestaff.uuid:
+    description: View a player''s uuid.
     default: op
   flamestaff.vanish:
     description: Hide yourself ingame
