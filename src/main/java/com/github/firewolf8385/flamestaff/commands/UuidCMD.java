@@ -22,7 +22,7 @@ public class UuidCMD implements CommandExecutor {
             return true;
         }
 
-        ChatUtils.chat(sender, "&a&l(&7&l!&a&l) &aUUID of &f" + t.getName() + " &ais &f" + t.getUniqueId() + "&a.");
+        ChatUtils.chat(sender, "&a&l(&7!&a&l) &aUUID of &f" + t.getName() + " &ais &f" + t.getUniqueId() + "&a.");
 
         return true;
     }

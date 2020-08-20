@@ -23,7 +23,7 @@ public class IpCMD implements CommandExecutor {
         }
 
         String ip = t.getAddress().toString();
-        ChatUtils.chat(sender, "&a&l(&7&l!&a&l) &aip of &f" + t.getName() + " &ais &f" + ip + "&a.");
+        ChatUtils.chat(sender, "&a&l(&7!&a&l) &aip of &f" + t.getName() + " &ais &f" + ip + "&a.");
 
         return true;
     }
