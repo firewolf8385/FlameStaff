@@ -20,6 +20,10 @@ permission-message: &noperms "§c§l(§7§l!§c§l) §cYou do not have access to
 #     # #    # #    # #    # #    # #   ## #    # #    #
  #####   ####  #    # #    # #    # #    # #####   ####
 commands:
+  ecsee:
+    description: Open a player''s enderchest.
+    permission: flamestaff.ecsee
+    permission-message: *noperms
   commandspy:
     description: Spy on other''s commands.
     aliases: [cmdspy]
@@ -60,6 +64,7 @@ permissions:
     children:
       flamestaff.commandspy: true
       flamestaff.commandspy.exempt: true
+      flamestaff.ecsee: true
       flamestaff.invisible: true
       flamestaff.invsee: true
       flamestaff.vanish: true
@@ -69,6 +74,9 @@ permissions:
   flamestaff.commandspy.exempt:
     description: Makes you exempt from command spy.
     default: false
+  flamestaff.ecsee:
+    description: View a player''s enderchest.
+    default: op
   flamestaff.invisible:
     description: Hide yourself ingame without leaving tab.
     default: op
