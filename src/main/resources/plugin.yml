@@ -24,6 +24,7 @@ commands:
     description: Open a player''s enderchest.
     permission: flamestaff.ecsee
     permission-message: *noperms
+    usage: "§c§l(§7!§c§l) §cUsage: /ecsee [player]"
   commandspy:
     description: Spy on other''s commands.
     aliases: [cmdspy]
@@ -38,16 +39,19 @@ commands:
     description: View another player''s inventory.
     permission: flamestaff.invsee
     permission-message: *noperms
+    usage: "§c§l(§7!§c§l) §cUsage: /invsee [player]"
   ip:
     description: View a player''s ip.
     aliases: [getip]
     permission: flamestaff.ip
     permission-message: *noperms
+    usage: "§c§l(§7!§c§l) §cUsage: /ip [player]"
   uuid:
     description: View a player''s UUID.
     aliases: [getuuid]
     permission: flamestaff.uuid
     permission-message: *noperms
+    usage: "§c§l(§7!§c§l) §cUsage: /uuid [player]"
   vanish:
     description: Hide yourself ingame
     aliases: [v]

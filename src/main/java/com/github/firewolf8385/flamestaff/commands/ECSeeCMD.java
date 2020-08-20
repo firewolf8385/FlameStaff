@@ -11,8 +11,7 @@ public class ECSeeCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cOnly players can use that command!!");
-            return true;
+            return false;
         }
 
         if(args.length == 0) {

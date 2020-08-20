@@ -11,8 +11,7 @@ public class IpCMD implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(args.length == 0) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cUsage: /ip [player]");
-            return true;
+            return false;
         }
 
         Player t = Bukkit.getPlayer(args[0]);
