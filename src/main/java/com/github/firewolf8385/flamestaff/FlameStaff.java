@@ -17,6 +17,9 @@ public final class FlameStaff extends JavaPlugin {
         plugin = this;
         registerCommands();
         registerListeners();
+
+        // Registers metrics.
+        new MetricsLite(this, 8603);
     }
 
     @Override
