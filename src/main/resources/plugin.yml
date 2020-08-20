@@ -53,6 +53,9 @@ permissions:
   flamestaff.commandspy:
     description: Spy on other''s commands.
     default: op
+  flamestaff.commandspy.exempt:
+    description: Makes you exempt from command spy.
+    default: false
   flamestaff.invisible:
     description: Hide yourself ingame without leaving tab.
     default: op

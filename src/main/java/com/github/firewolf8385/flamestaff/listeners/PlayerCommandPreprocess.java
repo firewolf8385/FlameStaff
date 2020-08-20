@@ -16,6 +16,10 @@ public class PlayerCommandPreprocess implements Listener {
         Player p = e.getPlayer();
         String cmd = e.getMessage();
 
+        if(p.hasPermission("flamestaff.commandspy.exempt")) {
+            return;
+        }
+
         for(UUID u : CommandSpyCMD.getPlayers()) {
             if(p.getUniqueId().equals(u)) {
                 continue;
