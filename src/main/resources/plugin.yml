@@ -1,0 +1,50 @@
+######## ##          ###    ##     ## ########  ######  ########    ###    ######## ########
+##       ##         ## ##   ###   ### ##       ##    ##    ##      ## ##   ##       ##
+##       ##        ##   ##  #### #### ##       ##          ##     ##   ##  ##       ##
+######   ##       ##     ## ## ### ## ######    ######     ##    ##     ## ######   ######
+##       ##       ######### ##     ## ##             ##    ##    ######### ##       ##
+##       ##       ##     ## ##     ## ##       ##    ##    ##    ##     ## ##       ##
+##       ######## ##     ## ##     ## ########  ######     ##    ##     ## ##       ##
+name: FlameStaff
+version: ${project.version}
+main: com.github.firewolf8385.flamestaff.FlameStaff
+api-version: 1.16
+author: firewolf8385
+permission-message: &noperms "§c§l(§7§l!§c§l) §cYou do not have access to that command."
+
+ #####
+#     #  ####  #    # #    #   ##   #    # #####   ####
+#       #    # ##  ## ##  ##  #  #  ##   # #    # #
+#       #    # # ## # # ## # #    # # #  # #    #  ####
+#       #    # #    # #    # ###### #  # # #    #      #
+#     # #    # #    # #    # #    # #   ## #    # #    #
+ #####   ####  #    # #    # #    # #    # #####   ####
+commands:
+  invisibile:
+    description: Hide yourself ingame without leaving tab.
+    aliases: [invis]
+    permission: flamestaff.invisible
+    permission-message: *noperms
+
+
+######
+#     # ###### #####  #    # #  ####   ####  #  ####  #    #  ####
+#     # #      #    # ##  ## # #      #      # #    # ##   # #
+######  #####  #    # # ## # #  ####   ####  # #    # # #  #  ####
+#       #      #####  #    # #      #      # # #    # #  # #      #
+#       #      #   #  #    # # #    # #    # # #    # #   ## #    #
+#       ###### #    # #    # #  ####   ####  #  ####  #    #  ####
+permissions:
+  flamestaff.*:
+    description: Give access to all flamestaff commands.
+    default: false
+    children:
+      flamestaff.all: true
+  flamestaff.all:
+    description: Give access to all flamestaff commands.
+    default: false
+    children:
+      flamestaff.invisible: true
+  flamestaff.invisible:
+    description: Hide yourself ingame without leaving tab.
+    default: op
