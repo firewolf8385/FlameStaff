@@ -30,6 +30,10 @@ commands:
     aliases: [invis]
     permission: flamestaff.invisible
     permission-message: *noperms
+  invsee:
+    description: View another player''s inventory.
+    permission: flamestaff.invsee
+    permission-message: *noperms
   vanish:
     description: Hide yourself ingame
     aliases: [v]
@@ -57,6 +61,7 @@ permissions:
       flamestaff.commandspy: true
       flamestaff.commandspy.exempt: true
       flamestaff.invisible: true
+      flamestaff.invsee: true
       flamestaff.vanish: true
   flamestaff.commandspy:
     description: Spy on other''s commands.
@@ -66,6 +71,9 @@ permissions:
     default: false
   flamestaff.invisible:
     description: Hide yourself ingame without leaving tab.
+    default: op
+  flamestaff.invsee:
+    description: View another player''s inventory.
     default: op
   flamestaff.vanish:
     description: Hide yourself ingame

@@ -1,6 +1,7 @@
 package com.github.firewolf8385.flamestaff;
 
 import com.github.firewolf8385.flamestaff.commands.CommandSpyCMD;
+import com.github.firewolf8385.flamestaff.commands.InvSeeCMD;
 import com.github.firewolf8385.flamestaff.commands.InvisibleCMD;
 import com.github.firewolf8385.flamestaff.commands.VanishCMD;
 import com.github.firewolf8385.flamestaff.listeners.PlayerCommandPreprocess;
@@ -34,6 +35,7 @@ public final class FlameStaff extends JavaPlugin {
     private void registerCommands() {
         getCommand("commandspy").setExecutor(new CommandSpyCMD());
         getCommand("invisibile").setExecutor(new InvisibleCMD());
+        getCommand("invsee").setExecutor(new InvSeeCMD());
         getCommand("vanish").setExecutor(new VanishCMD());
     }
 
