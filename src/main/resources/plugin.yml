@@ -30,6 +30,11 @@ commands:
     aliases: [invis]
     permission: flamestaff.invisible
     permission-message: *noperms
+  vanish:
+    description: Hide yourself ingame
+    aliases: [v]
+    permission: flamestaff.vanish
+    permission-message: *noperms
 
 
 ######
@@ -49,7 +54,10 @@ permissions:
     description: Give access to all flamestaff commands.
     default: false
     children:
+      flamestaff.commandspy: true
+      flamestaff.commandspy.exempt: true
       flamestaff.invisible: true
+      flamestaff.vanish: true
   flamestaff.commandspy:
     description: Spy on other''s commands.
     default: op
@@ -58,4 +66,7 @@ permissions:
     default: false
   flamestaff.invisible:
     description: Hide yourself ingame without leaving tab.
+    default: op
+  flamestaff.vanish:
+    description: Hide yourself ingame
     default: op
