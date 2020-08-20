@@ -34,6 +34,7 @@ public final class FlameStaff extends JavaPlugin {
         getCommand("ecsee").setExecutor(new ECSeeCMD());
         getCommand("invisibile").setExecutor(new InvisibleCMD());
         getCommand("invsee").setExecutor(new InvSeeCMD());
+        getCommand("ip").setExecutor(new IpCMD());
         getCommand("uuid").setExecutor(new UuidCMD());
         getCommand("vanish").setExecutor(new VanishCMD());
     }

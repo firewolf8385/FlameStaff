@@ -38,6 +38,11 @@ commands:
     description: View another player''s inventory.
     permission: flamestaff.invsee
     permission-message: *noperms
+  ip:
+    description: View a player''s ip.
+    aliases: [getip]
+    permission: flamestaff.ip
+    permission-message: *noperms
   uuid:
     description: View a player''s UUID.
     aliases: [getuuid]
@@ -72,6 +77,7 @@ permissions:
       flamestaff.ecsee: true
       flamestaff.invisible: true
       flamestaff.invsee: true
+      flamestaff.ip: true
       flamestaff.uuid: true
       flamestaff.vanish: true
   flamestaff.commandspy:
@@ -88,6 +94,9 @@ permissions:
     default: op
   flamestaff.invsee:
     description: View another player''s inventory.
+    default: op
+  flamestaff.ip:
+    description: View another player''s ip.
     default: op
   flamestaff.uuid:
     description: View a player''s uuid.
