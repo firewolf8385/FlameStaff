@@ -20,6 +20,11 @@ permission-message: &noperms "§c§l(§7§l!§c§l) §cYou do not have access to
 #     # #    # #    # #    # #    # #   ## #    # #    #
  #####   ####  #    # #    # #    # #    # #####   ####
 commands:
+  commandspy:
+    description: Spy on other''s commands.
+    aliases: [cmdspy]
+    permission: flamestaff.commandspy
+    permission-message: *noperms
   invisibile:
     description: Hide yourself ingame without leaving tab.
     aliases: [invis]
@@ -45,6 +50,9 @@ permissions:
     default: false
     children:
       flamestaff.invisible: true
+  flamestaff.commandspy:
+    description: Spy on other''s commands.
+    default: op
   flamestaff.invisible:
     description: Hide yourself ingame without leaving tab.
     default: op
