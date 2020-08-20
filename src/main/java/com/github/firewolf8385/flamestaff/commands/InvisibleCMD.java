@@ -21,10 +21,6 @@ public class InvisibleCMD implements CommandExecutor {
             ChatUtils.chat(sender, "&c&l(&7!&c&l) &cOnly players can use that command!!");
             return true;
         }
-        else if(!sender.hasPermission("flamestaff.invisible")) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cYou do not have access to that command!");
-            return true;
-        }
 
         Player p = (Player) sender;
 
