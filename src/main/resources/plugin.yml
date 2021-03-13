@@ -30,7 +30,7 @@ commands:
     aliases: [cmdspy]
     permission: flamestaff.commandspy
     permission-message: *noperms
-  invisibile:
+  invisible:
     description: Hide yourself ingame without leaving tab.
     aliases: [invis]
     permission: flamestaff.invisible

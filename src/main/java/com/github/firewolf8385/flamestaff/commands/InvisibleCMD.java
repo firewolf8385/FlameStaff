@@ -1,8 +1,6 @@
 package com.github.firewolf8385.flamestaff.commands;
 
 import com.github.firewolf8385.flamestaff.utils.ChatUtils;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
@@ -12,16 +10,25 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.UUID;
 
-public class InvisibleCMD implements CommandExecutor {
+/**
+ * Give yourself invisibility.
+ */
+public class InvisibleCMD extends AbstractCommand {
     private static Collection<UUID> players = new HashSet<>();
 
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cOnly players can use that command!!");
-            return true;
-        }
+    /**
+     * Registers the command.
+     */
+    public InvisibleCMD() {
+        super("invisible", "flamestaff.invisible", false);
+    }
 
+    /**
+     * Executes the command.
+     * @param sender The Command Sender.
+     * @param args Arguments of the command.
+     */
+    public void execute(CommandSender sender, String[] args) {
         Player p = (Player) sender;
 
         if(getPlayers().contains(p.getUniqueId())) {
@@ -34,8 +41,6 @@ public class InvisibleCMD implements CommandExecutor {
             p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, Integer.MAX_VALUE,0, false, false));
             ChatUtils.chat(p, "&a&l(&7!&a&l) &aYou are now invisible.");
         }
-
-        return true;
     }
 
     public static Collection<UUID> getPlayers() {

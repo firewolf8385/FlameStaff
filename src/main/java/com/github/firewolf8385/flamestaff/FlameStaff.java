@@ -15,7 +15,11 @@ public final class FlameStaff extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         plugin = this;
-        registerCommands();
+
+        // Registers Commands
+        AbstractCommand.registerCommands(this);
+
+        // Registers Listeners
         registerListeners();
 
         // Registers metrics.
@@ -30,16 +34,6 @@ public final class FlameStaff extends JavaPlugin {
 
     public static Plugin getPlugin() {
         return plugin;
-    }
-
-    private void registerCommands() {
-        getCommand("commandspy").setExecutor(new CommandSpyCMD());
-        getCommand("ecsee").setExecutor(new ECSeeCMD());
-        getCommand("invisibile").setExecutor(new InvisibleCMD());
-        getCommand("invsee").setExecutor(new InvSeeCMD());
-        getCommand("ip").setExecutor(new IpCMD());
-        getCommand("uuid").setExecutor(new UuidCMD());
-        getCommand("vanish").setExecutor(new VanishCMD());
     }
 
     private void registerListeners() {
